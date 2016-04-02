@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  QuimiNet
 //
-//  Created by Lizzy Cruz on 01/04/16.
+//  Created by Lizzy Cruz on 30/03/16.
 //  Copyright © 2016 Lizzy Cruz. All rights reserved.
 //
 

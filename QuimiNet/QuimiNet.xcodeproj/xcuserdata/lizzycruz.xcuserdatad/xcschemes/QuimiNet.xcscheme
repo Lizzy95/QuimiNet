@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "9A7069121CAEC4030090AAC6"
+               BlueprintIdentifier = "9A76232B1CAC3334002FD62F"
                BuildableName = "QuimiNet.app"
                BlueprintName = "QuimiNet"
                ReferencedContainer = "container:QuimiNet.xcodeproj">
@@ -32,7 +32,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9A7069121CAEC4030090AAC6"
+            BlueprintIdentifier = "9A76232B1CAC3334002FD62F"
             BuildableName = "QuimiNet.app"
             BlueprintName = "QuimiNet"
             ReferencedContainer = "container:QuimiNet.xcodeproj">
@@ -55,7 +55,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9A7069121CAEC4030090AAC6"
+            BlueprintIdentifier = "9A76232B1CAC3334002FD62F"
             BuildableName = "QuimiNet.app"
             BlueprintName = "QuimiNet"
             ReferencedContainer = "container:QuimiNet.xcodeproj">
@@ -74,7 +74,7 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "9A7069121CAEC4030090AAC6"
+            BlueprintIdentifier = "9A76232B1CAC3334002FD62F"
             BuildableName = "QuimiNet.app"
             BlueprintName = "QuimiNet"
             ReferencedContainer = "container:QuimiNet.xcodeproj">
