@@ -11,6 +11,10 @@ import UIKit
 class GruposFuncionalesTableViewController: UITableViewController {
     var arrGruposFunc : NSArray!
 
+    @IBAction func regresar(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         

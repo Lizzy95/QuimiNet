@@ -10,8 +10,12 @@ import UIKit
 
 class InformacionViewController: UIViewController {
 
+    @IBAction func regresarMenu(sender: AnyObject) {
+        self.dismissViewControllerAnimated(true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
         // Do any additional setup after loading the view.
     }
