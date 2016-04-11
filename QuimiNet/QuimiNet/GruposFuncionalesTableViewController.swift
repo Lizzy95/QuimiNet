@@ -10,6 +10,9 @@ import UIKit
 
 class GruposFuncionalesTableViewController: UITableViewController {
     var arrGruposFunc : NSArray!
+    
+    @IBOutlet var outletTableView: UITableView!
+    
 
     @IBAction func regresar(sender: AnyObject) {
         self.dismissViewControllerAnimated(true, completion: nil)
@@ -50,6 +53,7 @@ class GruposFuncionalesTableViewController: UITableViewController {
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCellWithIdentifier("idCell", forIndexPath: indexPath)
         cell.textLabel?.text = arrGruposFunc[indexPath.row] as! String
+        
 
         return cell
     }
@@ -90,14 +94,17 @@ class GruposFuncionalesTableViewController: UITableViewController {
     }
     */
 
-    /*
+    
     // MARK: - Navigation
 
     // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepareForSegue(segue: UIStoryboardSegue, sender: AnyObject?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
+        let indexPath = outletTableView.indexPathForSelectedRow
+        let viewDibujar  = segue.destinationViewController as!DibujarViewController
+        viewDibujar.gpFuncionales = arrGruposFunc[(indexPath?.row)!] as! String
     }
-    */
+    
 
 }

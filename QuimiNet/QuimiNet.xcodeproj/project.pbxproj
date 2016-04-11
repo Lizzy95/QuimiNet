@@ -15,6 +15,7 @@
 		9A7623321CAC3334002FD62F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7623311CAC3334002FD62F /* ViewController.swift */; };
 		9A7623371CAC3334002FD62F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A7623361CAC3334002FD62F /* Assets.xcassets */; };
 		9A76233A1CAC3334002FD62F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7623381CAC3334002FD62F /* LaunchScreen.storyboard */; };
+		9AEABCE91CB2EAA2009AB858 /* Prueba.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AEABCE81CB2EAA2009AB858 /* Prueba.plist */; };
 		9AFD8A7D1CB0541300FA4814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFD8A7B1CB0541300FA4814 /* Main.storyboard */; };
 /* End PBXBuildFile section */
 
@@ -29,6 +30,7 @@
 		9A7623361CAC3334002FD62F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A7623391CAC3334002FD62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A76233B1CAC3334002FD62F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9AEABCE81CB2EAA2009AB858 /* Prueba.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Prueba.plist; sourceTree = "<group>"; };
 		9AFD8A7C1CB0541300FA4814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -69,6 +71,7 @@
 				9AFD8A7B1CB0541300FA4814 /* Main.storyboard */,
 				9A70692A1CAEC6D40090AAC6 /* InformacionViewController.swift */,
 				9A70692C1CAEC6E00090AAC6 /* DibujarViewController.swift */,
+				9AEABCE81CB2EAA2009AB858 /* Prueba.plist */,
 				9A7623361CAC3334002FD62F /* Assets.xcassets */,
 				9A7623381CAC3334002FD62F /* LaunchScreen.storyboard */,
 				9A76233B1CAC3334002FD62F /* Info.plist */,
@@ -136,6 +139,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9A76233A1CAC3334002FD62F /* LaunchScreen.storyboard in Resources */,
+				9AEABCE91CB2EAA2009AB858 /* Prueba.plist in Resources */,
 				9A7623371CAC3334002FD62F /* Assets.xcassets in Resources */,
 				9A70692F1CAEC8160090AAC6 /* Property List.plist in Resources */,
 				9AFD8A7D1CB0541300FA4814 /* Main.storyboard in Resources */,

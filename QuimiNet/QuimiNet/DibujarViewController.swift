@@ -10,7 +10,41 @@ import UIKit
 
 class DibujarViewController: UIViewController {
     
+    
+    @IBOutlet weak var Vista: UIView!
+    
+    @IBOutlet weak var btC: UIButton!
 
+    @IBOutlet weak var btCH: UIButton!
+    
+    @IBOutlet weak var btCH2: UIButton!
+    
+    @IBOutlet weak var btCH3: UIButton!
+    
+    @IBOutlet weak var btCH4: UIButton!
+    
+    @IBOutlet weak var btEnlace: UIButton!
+    
+    @IBOutlet weak var btDobleEnlace: UIButton!
+    var gpFuncionales : String!
+    
+    @IBOutlet weak var lbNombre: UILabel!
+    
+    @IBOutlet weak var btTriple: UIButton!
+    
+    // MARK: - Actions
+    
+    @IBAction func oprimeC(sender: UIButton) {
+        let label = UILabel(frame: CGRectMake(0,0,200,21))
+        label.center = CGPointMake(10, 20)
+        label.text = "C"
+        self.Vista.addSubview(label)
+        
+        let imagee : UIImageView!
+        
+    }
+    
+    
    override func shouldAutorotate() -> Bool {
         return true
     }
@@ -26,7 +60,16 @@ class DibujarViewController: UIViewController {
         
             let value = UIInterfaceOrientation.LandscapeLeft.rawValue
             UIDevice.currentDevice().setValue(value, forKey: "orientation")
-
+        lbNombre.text = gpFuncionales
+        
+        
+        if gpFuncionales == "Alcanos" {
+            btDobleEnlace.hidden = true
+            btTriple.hidden = true
+        }
+        else if gpFuncionales == "Alquenos" {
+            btTriple.hidden = true
+        }
         
     }
 

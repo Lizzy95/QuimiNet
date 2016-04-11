@@ -130,6 +130,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="outletTableView" destination="P2R-jr-oCz" id="VYs-6h-gxi"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="SoS-xq-fxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -144,15 +147,15 @@
                         <viewControllerLayoutGuide type="bottom" id="1LD-5Z-aSh"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="sFY-Au-RZc">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzj-fx-Ekt">
-                                <rect key="frame" x="136" y="69" width="523" height="263"/>
+                                <rect key="frame" x="137" y="70" width="523" height="263"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alcanos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dck-Ca-2f4">
-                                <rect key="frame" x="303" y="12" width="61" height="21"/>
+                                <rect key="frame" x="303" y="31" width="153" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -171,6 +174,9 @@
                                 <rect key="frame" x="36" y="65" width="30" height="30"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="C"/>
+                                <connections>
+                                    <action selector="oprimeC:" destination="c7X-d5-tb3" eventType="touchUpInside" id="fr0-7h-buA"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bQI-Sa-HfQ">
                                 <rect key="frame" x="36" y="115" width="49" height="36"/>
@@ -178,16 +184,28 @@
                                 <state key="normal" title="CH"/>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cF5-Uy-ENr">
-                                <rect key="frame" x="43" y="293" width="74" height="48"/>
+                                <rect key="frame" x="32" y="264" width="73" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="------"/>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre Molecula:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgt-MG-ccO">
-                                <rect key="frame" x="150" y="346" width="140" height="21"/>
+                                <rect key="frame" x="137" y="341" width="140" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTI-3p-hyo">
+                                <rect key="frame" x="5" y="303" width="127" height="30"/>
+                                <state key="normal" title="Doble enlace(----)"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-go-t7A">
+                                <rect key="frame" x="20" y="402" width="139" height="30"/>
+                                <state key="normal" title="Triple enlace(------)"/>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWD-tz-LQx">
+                                <rect key="frame" x="6" y="336" width="125" height="30"/>
+                                <state key="normal" title="Triple enlace(----)"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -195,10 +213,23 @@
                     <nil key="simulatedTopBarMetrics"/>
                     <nil key="simulatedBottomBarMetrics"/>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+                    <connections>
+                        <outlet property="Vista" destination="fzj-fx-Ekt" id="K1c-rj-lzk"/>
+                        <outlet property="btC" destination="Oos-va-94o" id="jUB-rU-icG"/>
+                        <outlet property="btCH" destination="bQI-Sa-HfQ" id="bNh-WX-DKs"/>
+                        <outlet property="btCH2" destination="XUe-RA-izn" id="r6l-e3-Or7"/>
+                        <outlet property="btCH3" destination="Ek9-Kc-6Kf" id="kGK-Cx-QSw"/>
+                        <outlet property="btCH4" destination="cF5-Uy-ENr" id="mi7-Az-6uC"/>
+                        <outlet property="btDobleEnlace" destination="VTI-3p-hyo" id="02G-4L-Em3"/>
+                        <outlet property="btEnlace" destination="cF5-Uy-ENr" id="dhA-CX-Xaa"/>
+                        <outlet property="btTriple" destination="CWD-tz-LQx" id="Ibd-hM-1ig"/>
+                        <outlet property="lbNombre" destination="Dck-Ca-2f4" id="aKi-GS-nJ2"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xip-am-CgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2604.5" y="-63.5"/>
+            <point key="canvasLocation" x="2603.5" y="-64.5"/>
         </scene>
         <!--Informacion View Controller-->
         <scene sceneID="UNS-7x-djQ">
