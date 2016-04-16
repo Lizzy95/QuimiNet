@@ -92,26 +92,17 @@
         <scene sceneID="Bzj-dS-9bc">
             <objects>
                 <tableViewController id="GO0-ea-Pgd" customClass="GruposFuncionalesTableViewController" customModule="QuimiNet" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="P2R-jr-oCz">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="177" sectionHeaderHeight="28" sectionFooterHeight="28" id="P2R-jr-oCz">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCell" textLabel="CLn-GR-zH4" style="IBUITableViewCellStyleDefault" id="bpZ-Cd-soX">
-                                <rect key="frame" x="0.0" y="92" width="600" height="44"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCell" rowHeight="177" id="bpZ-Cd-soX">
+                                <rect key="frame" x="0.0" y="92" width="600" height="177"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bpZ-Cd-soX" id="A7u-CY-gNs">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="43.5"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="600" height="176.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <label opaque="NO" multipleTouchEnabled="YES" contentMode="left" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CLn-GR-zH4">
-                                            <rect key="frame" x="15" y="0.0" width="570" height="43.5"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
-                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
                                 </tableViewCellContentView>
                                 <connections>
                                     <segue destination="c7X-d5-tb3" kind="show" id="NfU-OT-ZP8"/>
@@ -154,8 +145,8 @@
                                 <rect key="frame" x="137" y="70" width="523" height="263"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alcanos" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dck-Ca-2f4">
-                                <rect key="frame" x="303" y="31" width="153" height="21"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alcanos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dck-Ca-2f4">
+                                <rect key="frame" x="93" y="27" width="448" height="32"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
@@ -164,11 +155,17 @@
                                 <rect key="frame" x="43" y="167" width="53" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="CH2"/>
+                                <connections>
+                                    <action selector="oprimeCH2:" destination="c7X-d5-tb3" eventType="touchUpInside" id="Bha-pE-g7L"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ek9-Kc-6Kf">
                                 <rect key="frame" x="43" y="231" width="51" height="43"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="CH3"/>
+                                <connections>
+                                    <action selector="oprimeCH3:" destination="c7X-d5-tb3" eventType="touchUpInside" id="Lpv-Mi-RHe"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Oos-va-94o">
                                 <rect key="frame" x="36" y="65" width="30" height="30"/>
@@ -182,21 +179,24 @@
                                 <rect key="frame" x="36" y="115" width="49" height="36"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="CH"/>
+                                <connections>
+                                    <action selector="oprimeCH:" destination="c7X-d5-tb3" eventType="touchUpInside" id="TZw-PG-Xaz"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cF5-Uy-ENr">
                                 <rect key="frame" x="32" y="264" width="73" height="48"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="------"/>
+                                <connections>
+                                    <action selector="oprimeEnlace:" destination="c7X-d5-tb3" eventType="touchUpInside" id="VUz-FS-kc2"/>
+                                </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Nombre Molecula:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Bgt-MG-ccO">
-                                <rect key="frame" x="137" y="341" width="140" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTI-3p-hyo">
                                 <rect key="frame" x="5" y="303" width="127" height="30"/>
                                 <state key="normal" title="Doble enlace(----)"/>
+                                <connections>
+                                    <action selector="oprimeEnlace2:" destination="c7X-d5-tb3" eventType="touchUpInside" id="YjO-H6-19G"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-go-t7A">
                                 <rect key="frame" x="20" y="402" width="139" height="30"/>
@@ -205,7 +205,30 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWD-tz-LQx">
                                 <rect key="frame" x="6" y="336" width="125" height="30"/>
                                 <state key="normal" title="Triple enlace(----)"/>
+                                <connections>
+                                    <action selector="oprimeEnlace3:" destination="c7X-d5-tb3" eventType="touchUpInside" id="PGu-JV-Cf3"/>
+                                </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-As-9f7">
+                                <rect key="frame" x="549" y="34" width="87" height="30"/>
+                                <state key="normal" title="Borrar Datos"/>
+                                <connections>
+                                    <action selector="borrarDatos:" destination="c7X-d5-tb3" eventType="touchUpInside" id="OoX-kB-8NC"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cm-jN-FRa">
+                                <rect key="frame" x="139" y="337" width="121" height="30"/>
+                                <state key="normal" title="Nombre Molecula"/>
+                                <connections>
+                                    <action selector="oprimeNombre:" destination="c7X-d5-tb3" eventType="touchUpInside" id="sUz-ND-bGV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fb2-st-xWP">
+                                <rect key="frame" x="268" y="341" width="392" height="26"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -223,8 +246,10 @@
                         <outlet property="btCH4" destination="cF5-Uy-ENr" id="mi7-Az-6uC"/>
                         <outlet property="btDobleEnlace" destination="VTI-3p-hyo" id="02G-4L-Em3"/>
                         <outlet property="btEnlace" destination="cF5-Uy-ENr" id="dhA-CX-Xaa"/>
+                        <outlet property="btNombre" destination="4cm-jN-FRa" id="GPW-11-M6v"/>
                         <outlet property="btTriple" destination="CWD-tz-LQx" id="Ibd-hM-1ig"/>
                         <outlet property="lbNombre" destination="Dck-Ca-2f4" id="aKi-GS-nJ2"/>
+                        <outlet property="lbRes" destination="fb2-st-xWP" id="pLV-dQ-PI5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xip-am-CgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
