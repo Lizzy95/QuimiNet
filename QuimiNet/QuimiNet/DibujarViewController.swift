@@ -16,7 +16,7 @@ class DibujarViewController: UIViewController {
     var contEnlaces : Int = 0
     var contElementos : Int  = 0
     var contEnlEl : Int = 0
-    var moleculas : [String] = []
+    var moleculas : [Elementos] = []
     var arrRamificac : [Ramificaciones] = []
     var iRamificaciones :Int = 0
     var iRamCor :Int = 0
@@ -78,7 +78,8 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            moleculas.append("C")
+            var auxElementos = Elementos(nom: "C", num: contElementos)
+            moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 4
             iRamificaciones += 3
@@ -112,7 +113,8 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            moleculas.append("C")
+            var auxElementos = Elementos(nom: "C", num: contElementos)
+            moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 3
             iRamificaciones += 2
@@ -147,7 +149,8 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            moleculas.append("CH")
+            var auxElementos = Elementos(nom: "CH", num: contElementos)
+            moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 3
             iRamificaciones += 2
@@ -174,7 +177,8 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            moleculas.append("CH")
+            var auxElementos = Elementos(nom: "CH", num: contElementos)
+            moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 2
             iRamificaciones += 1
@@ -203,7 +207,8 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            moleculas.append("CH2")
+            var auxElementos = Elementos(nom: "CH2", num: contElementos)
+            moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 2
             iRamificaciones += 1
@@ -221,7 +226,8 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             InicioX += imagee.frame.width
             self.Vista.addSubview(imagee)
-            moleculas.append("CH2")
+            var auxElementos = Elementos(nom: "CH2", num: contElementos)
+            moleculas.append(auxElementos)
             contEnlaces += 1
             contElementos += 1
         }
@@ -240,7 +246,8 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            moleculas.append("CH3")
+            var auxElementos = Elementos(nom: "CH3", num: contElementos)
+            moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 1
             
@@ -251,13 +258,15 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 50, 22)
             InicioX += imagee.frame.width
             self.Vista.addSubview(imagee)
-            moleculas.append("CH3")
+            var auxElementos = Elementos(nom: "CH3", num: contElementos)
+            moleculas.append(auxElementos)
             InicioX += 50
             contElementos += 1
             if (iRamificaciones > 0 ){
                 //label de advertencia
                 lbRes.text = "Completa la ramificacion de " + arrRamificac[iRamCor].nomMolecula
-                
+                var auxElementos = Elementos(nom: "Ram", num: 0)
+                moleculas.append(auxElementos)
                 InicioX = arrRamificac[iRamCor].posX
                 InicioY = arrRamificac[iRamCor].posY
                 iRamificaciones -= 1
@@ -321,7 +330,11 @@ class DibujarViewController: UIViewController {
         contEnlaces = 0
         InicioX = 10
         InicioY = 100
+        auxInicioX = 10
+        auxInicioY = 100
         moleculas = []
+        arrRamificac = []
+        lbRes.text=""
     }
     
     @IBAction func oprimeNombre(sender: UIButton) {
@@ -332,10 +345,29 @@ class DibujarViewController: UIViewController {
             lbRes.text = "Error te faltan elementos."
         }
         else {
-            var molec : nomAlcanos = nomAlcanos()
-            let sNombre = molec.sacarNombreSencilla(moleculas.count)
-            lbRes.text = sNombre
+            
+            if iRamCor > 0 {
+                var molec : nomAlcanos = nomAlcanos()
+                let sNombre = molec.sacarNombreRamifi(arrRamificac, arrMole: moleculas)
+                lbRes.text = sNombre
+            }
+            else {
+                var molec : nomAlcanos = nomAlcanos()
+                let sNombre = molec.sacarNombreSencilla(moleculas.count)
+                lbRes.text = sNombre
+            }
         }
+        
+       /* for inde in moleculas {
+            print(inde)
+        }
+        print("cant ", iRamCor)*/
+        /*for dos in 0...iRamCor-1 {
+            print(arrRamificac[dos].nomMolecula)
+            print(arrRamificac[dos].numElem)
+            print(arrRamificac[dos].posX)
+            print(arrRamificac[dos].posY)
+        }*/
         
     }
    override func shouldAutorotate() -> Bool {

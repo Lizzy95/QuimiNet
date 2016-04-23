@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9A38B5B81CCC0E0900AF9F53 /* Elementos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A38B5B71CCC0E0900AF9F53 /* Elementos.swift */; };
 		9A47A1F01CC2C42300301C00 /* nomAlcanos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47A1EF1CC2C42300301C00 /* nomAlcanos.swift */; };
 		9A47A1F21CC2E48100301C00 /* Ramificaciones.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A47A1F11CC2E48100301C00 /* Ramificaciones.swift */; };
 		9A7069291CAEC69C0090AAC6 /* GruposFuncionalesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7069281CAEC69C0090AAC6 /* GruposFuncionalesTableViewController.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9A38B5B71CCC0E0900AF9F53 /* Elementos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Elementos.swift; sourceTree = "<group>"; };
 		9A47A1EF1CC2C42300301C00 /* nomAlcanos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = nomAlcanos.swift; sourceTree = "<group>"; };
 		9A47A1F11CC2E48100301C00 /* Ramificaciones.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ramificaciones.swift; sourceTree = "<group>"; };
 		9A7069281CAEC69C0090AAC6 /* GruposFuncionalesTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GruposFuncionalesTableViewController.swift; sourceTree = "<group>"; };
@@ -76,6 +78,7 @@
 				9A47A1F11CC2E48100301C00 /* Ramificaciones.swift */,
 				9A70692A1CAEC6D40090AAC6 /* InformacionViewController.swift */,
 				9A70692C1CAEC6E00090AAC6 /* DibujarViewController.swift */,
+				9A38B5B71CCC0E0900AF9F53 /* Elementos.swift */,
 				9A47A1EF1CC2C42300301C00 /* nomAlcanos.swift */,
 				9AEABCE81CB2EAA2009AB858 /* Prueba.plist */,
 				9A7623361CAC3334002FD62F /* Assets.xcassets */,
@@ -165,6 +168,7 @@
 				9A70692D1CAEC6E00090AAC6 /* DibujarViewController.swift in Sources */,
 				9A70692B1CAEC6D40090AAC6 /* InformacionViewController.swift in Sources */,
 				9A47A1F01CC2C42300301C00 /* nomAlcanos.swift in Sources */,
+				9A38B5B81CCC0E0900AF9F53 /* Elementos.swift in Sources */,
 				9A7623301CAC3334002FD62F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
