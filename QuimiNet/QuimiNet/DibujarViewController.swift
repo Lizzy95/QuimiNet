@@ -20,6 +20,7 @@ class DibujarViewController: UIViewController {
     var arrRamificac : [Ramificaciones] = []
     var iRamificaciones :Int = 0
     var iRamCor :Int = 0
+    var idPadre : Int = -1
     
     @IBOutlet weak var Vista: UIView!
     
@@ -78,7 +79,7 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "C", num: contElementos)
+            var auxElementos = Elementos(nom: "C", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 4
@@ -113,7 +114,7 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "C", num: contElementos)
+            var auxElementos = Elementos(nom: "C", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 3
@@ -149,7 +150,7 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "CH", num: contElementos)
+            var auxElementos = Elementos(nom: "CH", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 3
@@ -177,7 +178,7 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "CH", num: contElementos)
+            var auxElementos = Elementos(nom: "CH", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 2
@@ -207,7 +208,7 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "CH2", num: contElementos)
+            var auxElementos = Elementos(nom: "CH2", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 2
@@ -226,7 +227,7 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             InicioX += imagee.frame.width
             self.Vista.addSubview(imagee)
-            var auxElementos = Elementos(nom: "CH2", num: contElementos)
+            var auxElementos = Elementos(nom: "CH2", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contEnlaces += 1
             contElementos += 1
@@ -246,7 +247,7 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "CH3", num: contElementos)
+            var auxElementos = Elementos(nom: "CH3", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 1
@@ -258,19 +259,21 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 50, 22)
             InicioX += imagee.frame.width
             self.Vista.addSubview(imagee)
-            var auxElementos = Elementos(nom: "CH3", num: contElementos)
+            var auxElementos = Elementos(nom: "CH3", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             InicioX += 50
             contElementos += 1
             if (iRamificaciones > 0 ){
                 //label de advertencia
                 lbRes.text = "Completa la ramificacion de " + arrRamificac[iRamCor].nomMolecula
-                var auxElementos = Elementos(nom: "Ram", num: 0)
+                var auxElementos = Elementos(nom: "Ram", num: 0, idP: idPadre, hij: 0)
                 moleculas.append(auxElementos)
                 InicioX = arrRamificac[iRamCor].posX
                 InicioY = arrRamificac[iRamCor].posY
+                idPadre = arrRamificac[iRamCor].numElem
                 iRamificaciones -= 1
                 iRamCor += 1
+                
             }
             else {
                 btC.enabled = false
