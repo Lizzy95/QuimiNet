@@ -105,6 +105,10 @@ class nomAlcanos: NSObject {
             }
         }
         
+        for i in 0...arrMole.count-1{
+            print("guarda",arrMole[i].nomMolecula)
+        }
+        
         //cadena principal
         for pos1 in 0...posRamifi[0]-1{
             var auxElementos = Elementos(nom: arrMole[pos1].nomMolecula, num: arrMole[pos1].numElem, idP: arrMole[pos1].idPadre, hij: arrMole[pos1].numHijos)
@@ -244,13 +248,13 @@ class nomAlcanos: NSObject {
                     print("entra2",j," ",nuevaMole[j].nomMolecula)
                 }
                 else{
-                    auxNom += "\(aux-j)" + "-" + sacarNombreRam(nuevaMole[j].numHijos)
+                    auxNom += "\((nuevaMole.count-j)+1)" + "-" + sacarNombreRam(nuevaMole[j].numHijos)
                 }
             }
         }
         
         
-        return (auxNom + " " + nomMolecula)
+        return (auxNom + "-" + nomMolecula)
     }
     func buscarPadre(numElem : Int, caden: [Elementos]) -> Int{
         for i in 0...caden.count-1{

@@ -38,13 +38,11 @@ class DibujarViewController: UIViewController {
     @IBOutlet weak var btEnlace: UIButton!
     //botones para obtener el nombre
     @IBOutlet weak var btNombre: UIButton!
-    @IBOutlet weak var btDobleEnlace: UIButton!
     var gpFuncionales : String!
     //obtener la respuesta
     @IBOutlet weak var lbRes: UILabel!
     @IBOutlet weak var lbNombre: UILabel!
-    
-    @IBOutlet weak var btTriple: UIButton!
+
     
     var imagee : UIImageView!
     
@@ -375,13 +373,6 @@ class DibujarViewController: UIViewController {
             UIDevice.currentDevice().setValue(value, forKey: "orientation")
         lbNombre.text = gpFuncionales
         btEnlace.enabled = false
-        if gpFuncionales == "Alcanos" {
-            btDobleEnlace.hidden = true
-            btTriple.hidden = true
-        }
-        else if gpFuncionales == "Alquenos" {
-            btTriple.hidden = true
-        }
     }
 
 
