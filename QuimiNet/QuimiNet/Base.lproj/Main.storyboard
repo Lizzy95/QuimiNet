@@ -191,23 +191,9 @@
                                     <action selector="oprimeEnlace:" destination="c7X-d5-tb3" eventType="touchUpInside" id="VUz-FS-kc2"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VTI-3p-hyo">
-                                <rect key="frame" x="5" y="303" width="127" height="30"/>
-                                <state key="normal" title="Doble enlace(----)"/>
-                                <connections>
-                                    <action selector="oprimeEnlace2:" destination="c7X-d5-tb3" eventType="touchUpInside" id="YjO-H6-19G"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-go-t7A">
                                 <rect key="frame" x="20" y="402" width="139" height="30"/>
                                 <state key="normal" title="Triple enlace(------)"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CWD-tz-LQx">
-                                <rect key="frame" x="6" y="336" width="125" height="30"/>
-                                <state key="normal" title="Triple enlace(----)"/>
-                                <connections>
-                                    <action selector="oprimeEnlace3:" destination="c7X-d5-tb3" eventType="touchUpInside" id="PGu-JV-Cf3"/>
-                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-As-9f7">
                                 <rect key="frame" x="549" y="34" width="87" height="30"/>
@@ -244,10 +230,8 @@
                         <outlet property="btCH2" destination="XUe-RA-izn" id="r6l-e3-Or7"/>
                         <outlet property="btCH3" destination="Ek9-Kc-6Kf" id="kGK-Cx-QSw"/>
                         <outlet property="btCH4" destination="cF5-Uy-ENr" id="mi7-Az-6uC"/>
-                        <outlet property="btDobleEnlace" destination="VTI-3p-hyo" id="02G-4L-Em3"/>
                         <outlet property="btEnlace" destination="cF5-Uy-ENr" id="dhA-CX-Xaa"/>
                         <outlet property="btNombre" destination="4cm-jN-FRa" id="GPW-11-M6v"/>
-                        <outlet property="btTriple" destination="CWD-tz-LQx" id="Ibd-hM-1ig"/>
                         <outlet property="lbNombre" destination="Dck-Ca-2f4" id="aKi-GS-nJ2"/>
                         <outlet property="lbRes" destination="fb2-st-xWP" id="pLV-dQ-PI5"/>
                     </connections>

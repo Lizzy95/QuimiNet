@@ -302,25 +302,6 @@ class DibujarViewController: UIViewController {
 
     }
     
-    @IBAction func oprimeEnlace2(sender: UIButton) {
-         imagee  = UIImageView(image: UIImage(named: "DobleEnlace"))
-        //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
-        imagee.frame = CGRectMake(InicioX, InicioY, 40, 11)
-        self.Vista.addSubview(imagee)
-        InicioX += imagee.frame.width
-        contEnlaces += 1
-
-    }
-    
-    @IBAction func oprimeEnlace3(sender: UIButton) {
-         imagee = UIImageView(image: UIImage(named: "TripleEnlace"))
-        //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
-        imagee.frame = CGRectMake(InicioX, InicioY, 40, 16)
-        self.Vista.addSubview(imagee)
-        InicioX += (imagee.frame.width)
-        contEnlaces += 1
-    }
-    
     @IBAction func borrarDatos(sender: UIButton) {
         //con esto se borran los elementos agregados a la vista
         self.Vista.subviews.forEach({$0.removeFromSuperview()})
@@ -331,6 +312,10 @@ class DibujarViewController: UIViewController {
         btEnlace.enabled = false
         contElementos = 0
         contEnlaces = 0
+        contEnlEl = 0
+        idPadre = -1
+        iRamCor = 0
+        iRamificaciones = 0
         InicioX = 10
         InicioY = 100
         auxInicioX = 10

@@ -47,7 +47,42 @@ class nomAlcanos: NSObject {
         return nombre
     }
     
-    
+    func sacarNombreRam(cantMol: Int) -> String {
+        var nombre :String = ""
+        
+        switch cantMol {
+        case 1:
+            nombre += "met"
+        case 2:
+            nombre += "et"
+        case 3:
+            nombre += "prop"
+        case 4:
+            nombre += "but"
+        case 5:
+            nombre += "pent"
+        case 6:
+            nombre += "hex"
+        case 7:
+            nombre += "hept"
+        case 8:
+            nombre += "oct"
+        case 9:
+            nombre += "non"
+        case 10:
+            nombre += "dec"
+        case 11:
+            nombre += "undec"
+        case 12:
+            nombre += "duodec"
+        default:
+            nombre += "ano"
+        }
+        nombre += "il"
+        
+        
+        return nombre
+    }
     
     func sacarNombreRamifi(arRami: [Ramificaciones], arrMole: [Elementos]) -> String {
         
@@ -153,50 +188,69 @@ class nomAlcanos: NSObject {
         var auxPadre : Int = 0
         if (arrMole.count-arRami.count) > nuevaMole.count {
             faltan = (arrMole.count-arRami.count) - nuevaMole.count
-            
             while faltan > 0 {
                 for i in 0...arrMole.count-1{
-                    if !buscar(arrMole[i].numElem, caden: nuevaMole){
-                        if (arrMole[i].idPadre == -1) && (arrMole[i].numElem == 0){
-                            arrMole[i].idPadre = arrMole[i].numElem + 1
-                            auxPadre = buscarPadre(arrMole[i].idPadre, caden: nuevaMole)
-                            nuevaMole[auxPadre].numHijos += 1
-                           
-                        }
-                        else if arrMole[i].idPadre == -1 {
-                            if arrMole[i-1].idPadre == -1{
+                    if arrMole[i].nomMolecula != "Ram" {
+                        if !buscar(arrMole[i].numElem, caden: nuevaMole){
+                            if (arrMole[i].idPadre == -1) && (arrMole[i].numElem == 0){
                                 arrMole[i].idPadre = arrMole[i].numElem + 1
                                 auxPadre = buscarPadre(arrMole[i].idPadre, caden: nuevaMole)
                                 nuevaMole[auxPadre].numHijos += 1
+                                faltan -= 1
+                            }
+                            else if arrMole[i].idPadre == -1 {
+                                if arrMole[i-1].idPadre == -1{
+                                    arrMole[i].idPadre = arrMole[i].numElem + 1
+                                    auxPadre = buscarPadre(arrMole[i].idPadre, caden: nuevaMole)
+                                    nuevaMole[auxPadre].numHijos += 1
+                                    faltan -= 1
+                                }
+                                else {
+                                    arrMole[i].idPadre = arrMole[i-1].idPadre
+                                    auxPadre = buscarPadre(arrMole[i].idPadre, caden: nuevaMole)
+                                    nuevaMole[auxPadre].numHijos += 1
+                                    faltan -= 1
+                                }
                             }
                             else {
-                                arrMole[i].idPadre = arrMole[i-1].idPadre
                                 auxPadre = buscarPadre(arrMole[i].idPadre, caden: nuevaMole)
                                 nuevaMole[auxPadre].numHijos += 1
+                                faltan -= 1
                             }
                         }
-                        else {
-                            auxPadre = buscarPadre(arrMole[i].idPadre, caden: nuevaMole)
-                            nuevaMole[auxPadre].numHijos += 1
-                        }
-                        faltan -= 1
                     }
+                    
                 }
                 
             }
             
         }
         
+        for i in 0...nuevaMole.count-1{
+            print(nuevaMole[i].nomMolecula," ",nuevaMole[i].idPadre," ",nuevaMole[i].numHijos,"id elem",nuevaMole[i].numElem)
+        }
+         // para saber el nombre de las ramificaciones una vez que ya sabemos quienes tienen hijos y cuantos hijos tienen.
         var aux : Int = 0
         var auxNom: String  = ""
-        
+        var cadenaRami : [[String]] = []
+     
         aux = (nuevaMole.count-1) / 2
         
-        for i in aux...nuevaMole.count-1 {
-            
+        for j in 0...nuevaMole.count-1{
+            print("entra",j," ",nuevaMole[j].nomMolecula)
+            if nuevaMole[j].numHijos > 0 {
+                if j <= aux {
+                    auxNom += "\(j+1)" + "-" + sacarNombreRam(nuevaMole[j].numHijos)
+                    print("entra2",j," ",nuevaMole[j].nomMolecula)
+                }
+                else{
+                    auxNom += "\(aux-j)" + "-" + sacarNombreRam(nuevaMole[j].numHijos)
+                }
+            }
         }
         
-        return nomMolecula
+        
+        return (auxNom + " " + nomMolecula)
     }
     func buscarPadre(numElem : Int, caden: [Elementos]) -> Int{
         for i in 0...caden.count-1{
