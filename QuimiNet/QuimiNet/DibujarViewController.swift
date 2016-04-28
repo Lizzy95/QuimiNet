@@ -9,8 +9,8 @@
 import UIKit
 
 class DibujarViewController: UIViewController {
-    var InicioX: CGFloat = 10
-    var InicioY : CGFloat = 100
+    var InicioX: CGFloat = 0
+    var InicioY : CGFloat = 0
     var auxInicioX : CGFloat = 10
     var auxInicioY : CGFloat = 100
     var contEnlaces : Int = 0
@@ -24,6 +24,8 @@ class DibujarViewController: UIViewController {
     
     @IBOutlet weak var Vista: UIView!
     
+    @IBOutlet weak var VistaScroll: UIScrollView!
+    
     //botones de elementos
     @IBOutlet weak var btC: UIButton!
 
@@ -33,9 +35,6 @@ class DibujarViewController: UIViewController {
     
     @IBOutlet weak var btCH3: UIButton!
     
-    @IBOutlet weak var btCH4: UIButton!
-    
-    @IBOutlet weak var btEnlace: UIButton!
     //botones para obtener el nombre
     @IBOutlet weak var btNombre: UIButton!
     var gpFuncionales : String!
@@ -43,6 +42,8 @@ class DibujarViewController: UIViewController {
     @IBOutlet weak var lbRes: UILabel!
     @IBOutlet weak var lbNombre: UILabel!
 
+    var indica : UIImageView = UIImageView(image: UIImage(named: "dot"))
+    //indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
     
     var imagee : UIImageView!
     
@@ -123,7 +124,9 @@ class DibujarViewController: UIViewController {
             auxRamificacion = Ramificaciones(nom: "C", num: contElementos, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
         }
-        
+        //Agrega indicado
+        indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
+        self.Vista.addSubview(indica)
     }
     
     @IBAction func oprimeCH(sender: UIButton) {
@@ -185,6 +188,9 @@ class DibujarViewController: UIViewController {
             arrRamificac.append(auxRamificacion)
         }
         
+        //Agrega Indicador
+        indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
+        self.Vista.addSubview(indica)
 
     }
     
@@ -230,7 +236,8 @@ class DibujarViewController: UIViewController {
             contEnlaces += 1
             contElementos += 1
         }
-        
+        indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
+        self.Vista.addSubview(indica)
     }
     
     @IBAction func oprimeCH3(sender: UIButton) {
@@ -249,6 +256,10 @@ class DibujarViewController: UIViewController {
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 1
+            
+            //Agrega Indicador
+            indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
+            self.Vista.addSubview(indica)
             
         }
         else if contElementos > 0 {
@@ -271,6 +282,9 @@ class DibujarViewController: UIViewController {
                 idPadre = arrRamificac[iRamCor].numElem
                 iRamificaciones -= 1
                 iRamCor += 1
+                //Agrega Indicador 
+                indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
+                self.Vista.addSubview(indica)
                 
             }
             else {
@@ -285,6 +299,8 @@ class DibujarViewController: UIViewController {
 
     }
     
+    
+    
     @IBAction func oprimeEnlace(sender: UIButton) {
          imagee = UIImageView(image: UIImage(named: "Enlace"))
         //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
@@ -296,7 +312,6 @@ class DibujarViewController: UIViewController {
         btCH2.enabled = true
         btCH3.enabled = true
         contEnlaces += 1
-        btEnlace.enabled = false
 
     }
     
@@ -307,7 +322,6 @@ class DibujarViewController: UIViewController {
         btCH.enabled = true
         btCH2.enabled = true
         btCH3.enabled = true
-        btEnlace.enabled = false
         contElementos = 0
         contEnlaces = 0
         contEnlEl = 0
@@ -315,7 +329,7 @@ class DibujarViewController: UIViewController {
         iRamCor = 0
         iRamificaciones = 0
         InicioX = 10
-        InicioY = 100
+        InicioY = ((Vista.frame.size.height)/4)*3
         auxInicioX = 10
         auxInicioY = 100
         moleculas = []
@@ -371,8 +385,18 @@ class DibujarViewController: UIViewController {
         
             let value = UIInterfaceOrientation.LandscapeLeft.rawValue
             UIDevice.currentDevice().setValue(value, forKey: "orientation")
-        lbNombre.text = gpFuncionales
-        btEnlace.enabled = false
+        //Codigo para implementar ScrollView
+        InicioY = ((Vista.frame.size.height)/4)*3
+        VistaScroll.addSubview(Vista)
+        VistaScroll.contentSize = Vista.frame.size
+        VistaScroll.contentOffset = CGPoint(x: InicioX, y: InicioY-(InicioY/2))
+        
+        //Agregar indicador de posicion
+        
+        indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
+        self.Vista.addSubview(indica)
+        
+        
     }
 
 

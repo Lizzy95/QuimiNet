@@ -45,15 +45,6 @@
                                     <segue destination="HjP-RI-esA" kind="showDetail" identifier="info" id="kIo-Ln-HAU"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Z6T-Pg-Q3Y">
-                                <rect key="frame" x="184" y="98" width="233" height="122"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="233" id="1jv-wK-TXh"/>
-                                    <constraint firstAttribute="width" constant="233" id="2cI-A4-wpH"/>
-                                    <constraint firstAttribute="width" secondItem="Z6T-Pg-Q3Y" secondAttribute="height" multiplier="233:122" id="ooK-DX-Rt5"/>
-                                    <constraint firstAttribute="height" constant="122" id="tsv-gy-rT0"/>
-                                </constraints>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0X-GY-JPa">
                                 <rect key="frame" x="212" y="350" width="176" height="35"/>
                                 <constraints>
@@ -63,9 +54,18 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Comenzar"/>
                                 <connections>
-                                    <segue destination="TDT-8X-k3Z" kind="show" id="1Pg-3y-PTm"/>
+                                    <segue destination="c7X-d5-tb3" kind="show" id="elW-Bb-LzS"/>
                                 </connections>
                             </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="Z6T-Pg-Q3Y">
+                                <rect key="frame" x="158" y="98" width="290" height="183"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="233" id="1jv-wK-TXh"/>
+                                    <constraint firstAttribute="width" constant="233" id="2cI-A4-wpH"/>
+                                    <constraint firstAttribute="width" secondItem="Z6T-Pg-Q3Y" secondAttribute="height" multiplier="233:122" id="ooK-DX-Rt5"/>
+                                    <constraint firstAttribute="height" constant="122" id="tsv-gy-rT0"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
@@ -86,48 +86,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="102" y="258"/>
-        </scene>
-        <!--Grupos Funcionales-->
-        <scene sceneID="Bzj-dS-9bc">
-            <objects>
-                <tableViewController id="GO0-ea-Pgd" customClass="GruposFuncionalesTableViewController" customModule="QuimiNet" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="177" sectionHeaderHeight="28" sectionFooterHeight="28" id="P2R-jr-oCz">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="idCell" rowHeight="177" id="bpZ-Cd-soX">
-                                <rect key="frame" x="0.0" y="92" width="600" height="177"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="bpZ-Cd-soX" id="A7u-CY-gNs">
-                                    <rect key="frame" x="0.0" y="0.0" width="600" height="176.5"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <segue destination="c7X-d5-tb3" kind="show" id="NfU-OT-ZP8"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="GO0-ea-Pgd" id="jpR-jG-pel"/>
-                            <outlet property="delegate" destination="GO0-ea-Pgd" id="EmR-bd-Kuc"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="Grupos Funcionales" id="Az5-DT-81h">
-                        <barButtonItem key="leftBarButtonItem" title="Back" id="ts7-jw-AIY">
-                            <connections>
-                                <action selector="regresar:" destination="GO0-ea-Pgd" id="iEW-lL-de4"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                    <connections>
-                        <outlet property="outletTableView" destination="P2R-jr-oCz" id="VYs-6h-gxi"/>
-                    </connections>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="SoS-xq-fxH" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1740" y="-69"/>
+            <point key="canvasLocation" x="582" y="-118"/>
         </scene>
         <!--Dibujar View Controller-->
         <scene sceneID="6qD-iK-h3t">
@@ -141,16 +100,15 @@
                         <rect key="frame" x="0.0" y="0.0" width="667" height="375"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzj-fx-Ekt">
-                                <rect key="frame" x="137" y="70" width="523" height="263"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                            </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Alcanos" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dck-Ca-2f4">
-                                <rect key="frame" x="93" y="27" width="448" height="32"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="xSD-0W-68g">
+                                <rect key="frame" x="117" y="50" width="538" height="279"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="fzj-fx-Ekt">
+                                        <rect key="frame" x="0.0" y="0.0" width="685" height="522"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    </view>
+                                </subviews>
+                            </scrollView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XUe-RA-izn">
                                 <rect key="frame" x="43" y="167" width="53" height="42"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
@@ -183,25 +141,6 @@
                                     <action selector="oprimeCH:" destination="c7X-d5-tb3" eventType="touchUpInside" id="TZw-PG-Xaz"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cF5-Uy-ENr">
-                                <rect key="frame" x="32" y="264" width="73" height="48"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="------"/>
-                                <connections>
-                                    <action selector="oprimeEnlace:" destination="c7X-d5-tb3" eventType="touchUpInside" id="VUz-FS-kc2"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Izf-go-t7A">
-                                <rect key="frame" x="20" y="402" width="139" height="30"/>
-                                <state key="normal" title="Triple enlace(------)"/>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bLY-As-9f7">
-                                <rect key="frame" x="549" y="34" width="87" height="30"/>
-                                <state key="normal" title="Borrar Datos"/>
-                                <connections>
-                                    <action selector="borrarDatos:" destination="c7X-d5-tb3" eventType="touchUpInside" id="OoX-kB-8NC"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cm-jN-FRa">
                                 <rect key="frame" x="139" y="337" width="121" height="30"/>
                                 <state key="normal" title="Nombre Molecula"/>
@@ -215,6 +154,33 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <navigationBar contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EYq-ny-0yN">
+                                <rect key="frame" x="0.0" y="0.0" width="667" height="44"/>
+                                <items>
+                                    <navigationItem title="Alcanos" id="B2a-1o-rGV">
+                                        <barButtonItem key="leftBarButtonItem" style="plain" id="51h-Wb-IhO">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="X1E-YP-wJk">
+                                                <rect key="frame" x="20" y="7" width="62" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Regresar"/>
+                                                <connections>
+                                                    <segue destination="nxM-t8-eK8" kind="unwind" unwindAction="unwindTabla:" id="JxO-co-ciQ"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" style="plain" id="6pK-as-NJX">
+                                            <button key="customView" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bLY-As-9f7">
+                                                <rect key="frame" x="560" y="7" width="87" height="30"/>
+                                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <state key="normal" title="Borrar Datos"/>
+                                                <connections>
+                                                    <action selector="borrarDatos:" destination="c7X-d5-tb3" eventType="touchUpInside" id="OoX-kB-8NC"/>
+                                                </connections>
+                                            </button>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
@@ -225,20 +191,19 @@
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
                     <connections>
                         <outlet property="Vista" destination="fzj-fx-Ekt" id="K1c-rj-lzk"/>
+                        <outlet property="VistaScroll" destination="xSD-0W-68g" id="Uue-lC-FDQ"/>
                         <outlet property="btC" destination="Oos-va-94o" id="jUB-rU-icG"/>
                         <outlet property="btCH" destination="bQI-Sa-HfQ" id="bNh-WX-DKs"/>
                         <outlet property="btCH2" destination="XUe-RA-izn" id="r6l-e3-Or7"/>
                         <outlet property="btCH3" destination="Ek9-Kc-6Kf" id="kGK-Cx-QSw"/>
-                        <outlet property="btCH4" destination="cF5-Uy-ENr" id="mi7-Az-6uC"/>
-                        <outlet property="btEnlace" destination="cF5-Uy-ENr" id="dhA-CX-Xaa"/>
                         <outlet property="btNombre" destination="4cm-jN-FRa" id="GPW-11-M6v"/>
-                        <outlet property="lbNombre" destination="Dck-Ca-2f4" id="aKi-GS-nJ2"/>
                         <outlet property="lbRes" destination="fb2-st-xWP" id="pLV-dQ-PI5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xip-am-CgB" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="nxM-t8-eK8" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="2603.5" y="-64.5"/>
+            <point key="canvasLocation" x="2696.5" y="-76.5"/>
         </scene>
         <!--Informacion View Controller-->
         <scene sceneID="UNS-7x-djQ">
@@ -271,7 +236,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Comenzar"/>
                                 <connections>
-                                    <segue destination="TDT-8X-k3Z" kind="show" id="xae-Z2-kJ5"/>
+                                    <segue destination="c7X-d5-tb3" kind="show" id="M6H-ss-gHb"/>
                                 </connections>
                             </button>
                             <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bCO-AA-Jac">
@@ -316,29 +281,11 @@
             </objects>
             <point key="canvasLocation" x="758" y="782"/>
         </scene>
-        <!--Navigation Controller-->
-        <scene sceneID="KPi-Wj-AKe">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="TDT-8X-k3Z" sceneMemberID="viewController">
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="o9k-Ip-Wlb">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                    <connections>
-                        <segue destination="GO0-ea-Pgd" kind="relationship" relationship="rootViewController" id="cL6-z9-NSY"/>
-                    </connections>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="YK5-sq-hcU" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="976" y="-77"/>
-        </scene>
     </scenes>
     <resources>
-        <image name="Logo" width="654" height="264"/>
+        <image name="Logo" width="1002" height="994"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="1Pg-3y-PTm"/>
+        <segue reference="elW-Bb-LzS"/>
     </inferredMetricsTieBreakers>
 </document>
