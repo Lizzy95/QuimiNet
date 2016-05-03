@@ -12,10 +12,48 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
-
+    
+    //elige el storyboard a desplegar
+    func setStoryboard() {
+        let storyboard : UIStoryboard = self.grabStoryboard();
+        self.setInitialScreen(storyboard);
+    }
+    //Decide el storyboard a mostrar con base en el tamaño de la pantalla
+    func grabStoryboard() -> UIStoryboard {
+        //OBTIENE EL TAMAÑO
+        let screenHeight : Int = Int(UIScreen.mainScreen().bounds.size.width);
+        print(screenHeight)
+        
+        var storyboard : UIStoryboard
+        
+        switch (screenHeight) {//elige el storyboard a utilizar
+        case 568:
+            storyboard = UIStoryboard(name:"Main", bundle: nil)
+            break;
+        case 1024:
+            storyboard = UIStoryboard(name: "Main iPad", bundle: nil)
+            break;
+        default:
+            storyboard = UIStoryboard(name: "Main", bundle: nil)
+            break;
+        }
+        return storyboard;
+    }
+    
+    func setInitialScreen(storyboard: UIStoryboard)
+    {
+        var initViewControler : UIViewController
+        
+        initViewControler = storyboard.instantiateViewControllerWithIdentifier("First")
+        
+        self.window = UIWindow(frame: UIScreen.mainScreen().bounds)
+        self.window?.rootViewController = initViewControler
+        self.window?.makeKeyAndVisible()
+    }
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.setStoryboard()
         return true
     }
 

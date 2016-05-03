@@ -269,7 +269,8 @@ class nomAlcanos: NSObject {
          // para saber el nombre de las ramificaciones una vez que ya sabemos quienes tienen hijos y cuantos hijos tienen.
         var aux : Int = 0
         var auxNom: String  = ""
-        var cadenaRami : [[String]] = []
+        var cadenaRami : [String] = []
+        var nums: [String] = []
      
         aux = (nuevaMole.count-1) / 2
         
@@ -293,12 +294,23 @@ class nomAlcanos: NSObject {
                 if nuevaMole[j].numHijos > 0 {
                     //de acuerdo a su posicion es como da el nombre si es antes de la mitad.
                     if j <= aux {
-                        auxNom += "\(j+1)" + "-" + sacarNombreRam(nuevaMole[j].numHijos)
+                        
+                        //auxNom += "\(j+1)" + "-" + sacarNombreRam(nuevaMole[j].numHijos)
+                        cadenaRami.append(sacarNombreRam(nuevaMole[j].numHijos))
+                        nums.append("\(j+1)")
+                        //print(cadenaRami[0]," ", nums[0])
                     }
                     else{//si es despues de la mitad da el nombre contando su posicion de atras a adelante
-                        auxNom += "\((nuevaMole.count-j)+1)" + "-" + sacarNombreRam(nuevaMole[j].numHijos)
+                        //auxNom += "\((nuevaMole.count-j)+1)" + "-" + sacarNombreRam(nuevaMole[j].numHijos)
+                        cadenaRami.append(sacarNombreRam(nuevaMole[j].numHijos))
+                        nums.append("\((nuevaMole.count-j)+1)")
+                        print("segndo valor",auxNom)
+                       // print(cadenaRami[1]," ", nums[1])
                     }
                 }
+            }
+            for n in 0...cadenaRami.count-1{
+                print(cadenaRami[n]," ", nums[n])
             }
         }
         

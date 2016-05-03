@@ -23,7 +23,7 @@ class Creditos: UIViewController {
         InicioY = ((Vista1.frame.size.height)/2)
         VistaScrollCre.addSubview(Vista1)
         VistaScrollCre.contentSize = Vista1.frame.size
-        VistaScrollCre.contentOffset = CGPoint(x: InicioX, y: (InicioY/2))
+        VistaScrollCre.contentOffset = CGPoint(x: 0, y: 0)
 
         // Do any additional setup after loading the view.
     }
