@@ -1,7 +1,7 @@
 //
 //  Ramificaciones.swift
 //  QuimiNet
-//
+//  Clase de tipo de objetos para las ramificaciones.
 //  Created by Lizzy Cruz on 16/04/16.
 //  Copyright © 2016 Lizzy Cruz. All rights reserved.
 //

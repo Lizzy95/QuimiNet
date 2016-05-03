@@ -21,6 +21,7 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
     
+    //funcion para que se puedan regrear las demas vistas a esta
     @IBAction func unwindTabla(sender: UIStoryboardSegue) {
         //algo
         

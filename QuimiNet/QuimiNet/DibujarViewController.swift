@@ -78,18 +78,18 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "C", num: contElementos, idP: idPadre, hij: 0)
+            let auxElementos = Elementos(nom: "C", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 4
             iRamificaciones += 3
-            var auxRamificacion = Ramificaciones(nom: "C", num: contElementos, posx: auxInicioX, posy: auxInicioY)
+            var auxRamificacion = Ramificaciones(nom: "C", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
             auxInicioY = InicioY+51
-            auxRamificacion = Ramificaciones(nom: "C", num: contElementos, posx: auxInicioX, posy: auxInicioY)
+            auxRamificacion = Ramificaciones(nom: "C", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
             auxInicioX = InicioX-60
-            auxRamificacion = Ramificaciones(nom: "C", num: contElementos, posx: auxInicioX, posy: auxInicioY)
+            auxRamificacion = Ramificaciones(nom: "C", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
         }
         else if contElementos > 0 {
@@ -113,15 +113,15 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "C", num: contElementos, idP: idPadre, hij: 0)
+            let auxElementos = Elementos(nom: "C", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 3
             iRamificaciones += 2
-            var auxRamificacion = Ramificaciones(nom: "C", num: contElementos, posx: auxInicioX, posy: auxInicioY)
+            var auxRamificacion = Ramificaciones(nom: "C", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
             auxInicioY = InicioY+53
-            auxRamificacion = Ramificaciones(nom: "C", num: contElementos, posx: auxInicioX, posy: auxInicioY)
+            auxRamificacion = Ramificaciones(nom: "C", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
         }
         //Agrega indicado
@@ -151,15 +151,15 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "CH", num: contElementos, idP: idPadre, hij: 0)
+            let auxElementos = Elementos(nom: "CH", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 3
             iRamificaciones += 2
-            var auxRamificacion = Ramificaciones(nom: "CH", num: contElementos, posx: auxInicioX, posy: auxInicioY)
+            var auxRamificacion = Ramificaciones(nom: "CH", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
             auxInicioY = InicioY+65
-            auxRamificacion = Ramificaciones(nom: "CH", num: contElementos, posx: auxInicioX, posy: auxInicioY)
+            auxRamificacion = Ramificaciones(nom: "CH", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
         }
         else if contElementos > 0 {
@@ -179,12 +179,12 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "CH", num: contElementos, idP: idPadre, hij: 0)
+            let auxElementos = Elementos(nom: "CH", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 2
             iRamificaciones += 1
-            var auxRamificacion = Ramificaciones(nom: "CH", num: contElementos, posx: auxInicioX, posy: auxInicioY)
+            let auxRamificacion = Ramificaciones(nom: "CH", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
         }
         
@@ -212,12 +212,12 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "CH2", num: contElementos, idP: idPadre, hij: 0)
+            let auxElementos = Elementos(nom: "CH2", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 2
             iRamificaciones += 1
-            var auxRamificacion = Ramificaciones(nom: "CH2", num: contElementos, posx: auxInicioX, posy: auxInicioY)
+            let auxRamificacion = Ramificaciones(nom: "CH2", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
         }
         else if contElementos > 0{
@@ -231,7 +231,7 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             InicioX += imagee.frame.width
             self.Vista.addSubview(imagee)
-            var auxElementos = Elementos(nom: "CH2", num: contElementos, idP: idPadre, hij: 0)
+            let auxElementos = Elementos(nom: "CH2", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contEnlaces += 1
             contElementos += 1
@@ -252,7 +252,7 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
             self.Vista.addSubview(imagee)
             InicioX += imagee.frame.width
-            var auxElementos = Elementos(nom: "CH3", num: contElementos, idP: idPadre, hij: 0)
+            let auxElementos = Elementos(nom: "CH3", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             contElementos += 1
             contEnlaces += 1
@@ -268,23 +268,24 @@ class DibujarViewController: UIViewController {
             imagee.frame = CGRectMake(InicioX, InicioY, 50, 22)
             InicioX += imagee.frame.width
             self.Vista.addSubview(imagee)
-            var auxElementos = Elementos(nom: "CH3", num: contElementos, idP: idPadre, hij: 0)
+            let auxElementos = Elementos(nom: "CH3", num: contElementos, idP: idPadre, hij: 0)
             moleculas.append(auxElementos)
             InicioX += 50
             contElementos += 1
             if (iRamificaciones > 0 ){
                 //label de advertencia
                 lbRes.text = "Completa la ramificacion de " + arrRamificac[iRamCor].nomMolecula
-                var auxElementos = Elementos(nom: "Ram", num: 0, idP: idPadre, hij: 0)
+                let auxElementos = Elementos(nom: "Ram", num: -1, idP: idPadre, hij: 0)
                 moleculas.append(auxElementos)
                 InicioX = arrRamificac[iRamCor].posX
                 InicioY = arrRamificac[iRamCor].posY
                 idPadre = arrRamificac[iRamCor].numElem
                 iRamificaciones -= 1
                 iRamCor += 1
-                //Agrega Indicador 
+                //Agregar indicador de posicion
                 indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
                 self.Vista.addSubview(indica)
+                
                 
             }
             else {
@@ -293,6 +294,8 @@ class DibujarViewController: UIViewController {
                 btCH2.enabled = false
                 btCH3.enabled = false
                 lbRes.text = "Ya no puedes agregar mas elementos"
+                indica.frame = CGRectMake(InicioX, InicioY, 0, 0)
+                self.Vista.addSubview(indica)
                 
             }
         }
@@ -335,24 +338,25 @@ class DibujarViewController: UIViewController {
         moleculas = []
         arrRamificac = []
         lbRes.text=""
+        //Agregar indicador de posicion
+        
+        indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
+        self.Vista.addSubview(indica)
     }
     
     @IBAction func oprimeNombre(sender: UIButton) {
-        print("elem ", contElementos)
-        print("enla ",contEnlaces)
-        print("cant", moleculas.count)
         if contEnlaces >= contElementos{
             lbRes.text = "Error te faltan elementos."
         }
         else {
             
             if iRamCor > 0 {
-                var molec : nomAlcanos = nomAlcanos()
+                let molec : nomAlcanos = nomAlcanos()
                 let sNombre = molec.sacarNombreRamifi(arrRamificac, arrMole: moleculas)
                 lbRes.text = sNombre
             }
             else {
-                var molec : nomAlcanos = nomAlcanos()
+                let molec : nomAlcanos = nomAlcanos()
                 let sNombre = molec.sacarNombreSencilla(moleculas.count)
                 lbRes.text = sNombre
             }
@@ -386,10 +390,10 @@ class DibujarViewController: UIViewController {
             let value = UIInterfaceOrientation.LandscapeLeft.rawValue
             UIDevice.currentDevice().setValue(value, forKey: "orientation")
         //Codigo para implementar ScrollView
-        InicioY = ((Vista.frame.size.height)/4)*3
+        InicioY = ((Vista.frame.size.height)/2)
         VistaScroll.addSubview(Vista)
         VistaScroll.contentSize = Vista.frame.size
-        VistaScroll.contentOffset = CGPoint(x: InicioX, y: InicioY-(InicioY/2))
+        VistaScroll.contentOffset = CGPoint(x: InicioX, y: (InicioY/2))
         
         //Agregar indicador de posicion
         
