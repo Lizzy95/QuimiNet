@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  QuimiNet
 //
-//  Created by Lizzy Cruz on 30/03/16.
+//  Created by Lizzy Cruz and Abe Gonzalez on 30/03/16.
 //  Copyright © 2016 Lizzy Cruz. All rights reserved.
 //
 
@@ -32,6 +32,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             break;
         case 1024:
             storyboard = UIStoryboard(name: "Main iPad", bundle: nil)
+            break;
+        case 1366:
+            storyboard = UIStoryboard(name: "Main iPadPro", bundle: nil)
             break;
         default:
             storyboard = UIStoryboard(name: "Main", bundle: nil)

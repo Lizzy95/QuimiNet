@@ -4,7 +4,7 @@
 //  Esta clase se creo para añadir a una table view los demas elementos que se quieren formar en base a la property
 //  list.
 //
-//  Created by Lizzy Cruz on 01/04/16.
+//  Created by Lizzy Cruz and Abe Gonzalez on 01/04/16.
 //  Copyright © 2016 Lizzy Cruz. All rights reserved.
 //
 

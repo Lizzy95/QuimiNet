@@ -2,7 +2,7 @@
 //  Elementos.swift
 //  QuimiNet
 //
-//  Created by Lizzy Cruz on 23/04/16.
+//  Created by Lizzy Cruz and Abe Gonzalez on 23/04/16.
 //  Copyright © 2016 Lizzy Cruz. All rights reserved.
 //
 
@@ -14,6 +14,13 @@ class Elementos: NSObject {
     var idPadre : Int = 0
     var numHijos : Int = 0
     
+    /*
+     *
+     * Metodo init
+     *
+     * Este metodo inicializa las variables con los datos dados.
+     *
+     */
     init(nom : String, num : Int, idP : Int, hij : Int){
         nomMolecula = nom
         numElem = num

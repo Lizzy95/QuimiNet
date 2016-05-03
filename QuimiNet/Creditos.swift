@@ -4,7 +4,7 @@
 //  Clase asignada a la vista de Creditos donde se desplegara los responsables de la aplicacion, asi como sus politicas
 //  de difusion.
 //
-//  Created by Lizzy Cruz on 02/05/16.
+//  Created by Lizzy Cruz and Abe Gonzalez on 02/05/16.
 //  Copyright © 2016 Lizzy Cruz. All rights reserved.
 //
 
@@ -16,6 +16,7 @@ class Creditos: UIViewController {
     
     @IBOutlet weak var VistaScrollCre: UIScrollView!
     @IBOutlet weak var Vista1: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         

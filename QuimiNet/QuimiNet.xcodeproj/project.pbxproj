@@ -22,6 +22,7 @@
 		9A8DC64D1CD7CFB50086247B /* Creditos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DC64C1CD7CFB50086247B /* Creditos.swift */; };
 		9AEABCE91CB2EAA2009AB858 /* Prueba.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AEABCE81CB2EAA2009AB858 /* Prueba.plist */; };
 		9AFD8A7D1CB0541300FA4814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFD8A7B1CB0541300FA4814 /* Main.storyboard */; };
+		9AFDE27D1CD95EC0000BA31E /* Main iPadPro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFDE27B1CD95EC0000BA31E /* Main iPadPro.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		9A8DC64C1CD7CFB50086247B /* Creditos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Creditos.swift; path = ../Creditos.swift; sourceTree = "<group>"; };
 		9AEABCE81CB2EAA2009AB858 /* Prueba.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Prueba.plist; sourceTree = "<group>"; };
 		9AFD8A7C1CB0541300FA4814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		9AFDE27C1CD95EC0000BA31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main iPadPro.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -75,6 +77,7 @@
 		9A76232E1CAC3334002FD62F /* QuimiNet */ = {
 			isa = PBXGroup;
 			children = (
+				9AFDE27B1CD95EC0000BA31E /* Main iPadPro.storyboard */,
 				9A4AD30D1CD886A80044CB2A /* Main iPad.storyboard */,
 				9A8DC64C1CD7CFB50086247B /* Creditos.swift */,
 				9A76232F1CAC3334002FD62F /* AppDelegate.swift */,
@@ -159,6 +162,7 @@
 				9A7623371CAC3334002FD62F /* Assets.xcassets in Resources */,
 				9A70692F1CAEC8160090AAC6 /* Property List.plist in Resources */,
 				9AFD8A7D1CB0541300FA4814 /* Main.storyboard in Resources */,
+				9AFDE27D1CD95EC0000BA31E /* Main iPadPro.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +210,14 @@
 				9AFD8A7C1CB0541300FA4814 /* Base */,
 			);
 			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		9AFDE27B1CD95EC0000BA31E /* Main iPadPro.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				9AFDE27C1CD95EC0000BA31E /* Base */,
+			);
+			name = "Main iPadPro.storyboard";
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */

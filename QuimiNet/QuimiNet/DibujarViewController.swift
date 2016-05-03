@@ -2,7 +2,7 @@
 //  DibujarViewController.swift
 //  QuimiNet
 //
-//  Created by Lizzy Cruz on 01/04/16.
+//  Created by Lizzy Cruz and Abe Gonzalez on 01/04/16.
 //  Copyright © 2016 Lizzy Cruz. All rights reserved.
 //
 
@@ -43,7 +43,6 @@ class DibujarViewController: UIViewController {
     @IBOutlet weak var lbNombre: UILabel!
 
     var indica : UIImageView = UIImageView(image: UIImage(named: "dot"))
-    //indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
     
     var imagee : UIImageView!
     
@@ -195,6 +194,12 @@ class DibujarViewController: UIViewController {
     }
     
     @IBAction func oprimeCH2(sender: UIButton) {
+        if contElementos >= 10 && arrRamificac.count <= 0{
+            lbRes.text = "Tu cadena mas larga debe de ser de 12 elementos"
+            btC.enabled = false
+            btCH.enabled = false
+            btCH2.enabled = false
+        }
         if contElementos == 0 {
             imagee = UIImageView(image: UIImage(named: "CH2"))
             //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
@@ -362,18 +367,8 @@ class DibujarViewController: UIViewController {
             }
         }
         
-       /* for inde in moleculas {
-            print(inde)
-        }
-        print("cant ", iRamCor)*/
-        /*for dos in 0...iRamCor-1 {
-            print(arrRamificac[dos].nomMolecula)
-            print(arrRamificac[dos].numElem)
-            print(arrRamificac[dos].posX)
-            print(arrRamificac[dos].posY)
-        }*/
-        
     }
+    
    override func shouldAutorotate() -> Bool {
         return true
     }
@@ -396,7 +391,6 @@ class DibujarViewController: UIViewController {
         VistaScroll.contentOffset = CGPoint(x: InicioX, y: (InicioY/2))
         
         //Agregar indicador de posicion
-        
         indica.frame = CGRectMake(InicioX, InicioY, 24, 24)
         self.Vista.addSubview(indica)
         

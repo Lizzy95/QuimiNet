@@ -2,7 +2,7 @@
 //  nomAlcanos.swift
 //  QuimiNet
 //
-//  Created by Lizzy Cruz on 16/04/16.
+//  Created by Lizzy Cruz and Abe Gonzalez on 16/04/16.
 //  Copyright © 2016 Lizzy Cruz. All rights reserved.
 //
 
@@ -10,7 +10,13 @@ import UIKit
 
 class nomAlcanos: NSObject {
     
-    //Nombre para carbones en la cadena principal.
+    /*
+     *
+     * Metodo sacarNombreSencilla
+     *
+     *Este metodo se encarga de regresar el nombre de un alcano en una cadena sencilla.
+     *
+     */
     func sacarNombreSencilla(cantMol: Int) -> String {
         var nombre :String = ""
         
@@ -47,7 +53,13 @@ class nomAlcanos: NSObject {
         return nombre
     }
     
-    //Nombre para carbones en las cadenas de ramificaciones.
+    /*
+     *
+     * Metodo sacarNombreRam
+     *
+     *Este metodo se encarga de regresar el nombre para carbones en las cadenas de ramificaciones.
+     *
+     */
     func sacarNombreRam(cantMol: Int) -> String {
         var nombre :String = ""
         
@@ -84,8 +96,13 @@ class nomAlcanos: NSObject {
         return nombre
     }
     
-    
-    //Numero de cadenas de ramas o grupos, esto en el caso de que sean iguales.
+    /*
+     *
+     * Metodo sacarNumeroCadena
+     *
+     *Este metodo se encarga de regresar el numero de cadenas de ramas o grupos, esto en el caso de que sean iguales.
+     *
+     */
     func sacarNumeroCadena(cantMol: Int) -> String {
         var nombre :String = ""
         
@@ -122,11 +139,19 @@ class nomAlcanos: NSObject {
     }
     
     
+    /*
+     *
+     * Metodo sacarNombreRamifi
+     *
+     * Este metodo se encarga de sacar el nombre de la cadena formada con las ramificaciones, primeramente hace los
+     * posibles caminos que se pueden seguir en la cadena y escoge la cadena mas larga para de esta sacar su nombre y
+     * posteriormente ver sus diferentes ramificaciones con su nombre.
+     *
+     */
     func sacarNombreRamifi(arRami: [Ramificaciones], arrMole: [Elementos]) -> String {
         
         var nomMolecula: String = ""
         var auxCadena: [Elementos] = []
-        var cont :Int = 0
         var faltan : Int = 0
         var auxCadenaLarga: [[Elementos]] = []
         var posRamifi: [Int] = []
@@ -137,10 +162,6 @@ class nomAlcanos: NSObject {
             if arrMole[i].nomMolecula == "Ram" {
                 posRamifi.append(i)
             }
-        }
-        
-        for i in 0...arrMole.count-1{
-            print("guarda",arrMole[i].nomMolecula, "id elem ", arrMole[i].numElem, "id padre ", arrMole[i].idPadre)
         }
         
         //cadena principal
@@ -157,14 +178,12 @@ class nomAlcanos: NSObject {
                 return "Tienes que rehacer la cadena"
             }
             for posi in posEl...posRamifi[0]-1 {
-                print("ultimo valor ",arrMole[posi].numElem, " ", arrMole[posi].nomMolecula)
                 let auxElementos = Elementos(nom: arrMole[posi].nomMolecula, num: arrMole[posi].numElem, idP: arrMole[posi].idPadre, hij: arrMole[posi].numHijos)
                 auxCadena.append(auxElementos)
             }
             if cant >=  posRamifi.count-1 {
                 //hace el appen de su ramificacion correspondiente, de donde comienza hasta donde termina la cadena
                 for pos3 in posRamifi[cant]+1...arrMole.count-1 {
-                    //auxCadena.append(arrMole[pos3])
                     let auxElementos = Elementos(nom: arrMole[pos3].nomMolecula, num: arrMole[pos3].numElem, idP: arrMole[pos3].idPadre, hij: arrMole[pos3].numHijos)
                     auxCadena.insert(auxElementos, atIndex: 0)
                 }
@@ -172,7 +191,6 @@ class nomAlcanos: NSObject {
             else{
                 //hace el appen de su ramificacion correspondiente, de donde comienza a donde empieza la otra ramificacion.
                 for pos2 in posRamifi[cant]+1...posRamifi[cant+1]-1{
-                    //auxCadena.append(arrMole[pos2])
                     let auxElementos = Elementos(nom: arrMole[pos2].nomMolecula, num: arrMole[pos2].numElem, idP: arrMole[pos2].idPadre, hij: arrMole[pos2].numHijos)
                     auxCadena.insert(auxElementos, atIndex: 0)
                 }
@@ -186,15 +204,12 @@ class nomAlcanos: NSObject {
             let posEl = buscarPadre(arRami[cant].numElem, caden: arrMole)
             // Hace un append de la cadena desde su ramificacion hasta donde termina la cadena principal.
             for posi in 0...posEl {
-                print("ultimo valor ",arrMole[posi].numElem, " ", arrMole[posi].nomMolecula, "hijos ",arrMole[posi].numHijos)
-                //auxCadena.append(arrMole[posi])
                 let auxElementos = Elementos(nom: arrMole[posi].nomMolecula, num: arrMole[posi].numElem, idP: arrMole[posi].idPadre, hij: arrMole[posi].numHijos)
                 auxCadena.insert(auxElementos, atIndex: 0)
             }
             if cant >=  posRamifi.count-1 {
                 //hace el appen de su ramificacion correspondiente, de donde comienza hasta donde termina la cadena
                 for pos3 in posRamifi[cant]+1...arrMole.count-1 {
-                    //auxCadena.append(arrMole[pos3])
                     let auxElementos = Elementos(nom: arrMole[pos3].nomMolecula, num: arrMole[pos3].numElem,idP: arrMole[pos3].idPadre, hij: arrMole[pos3].numHijos)
                     auxCadena.insert(auxElementos, atIndex: 0)
                 }
@@ -202,7 +217,6 @@ class nomAlcanos: NSObject {
             else{
                 //hace el appen de su ramificacion correspondiente, de donde comienza a donde empieza la otra ramificacion.
                 for pos2 in posRamifi[cant]+1...posRamifi[cant+1]-1{
-                    //auxCadena.append(arrMole[pos2])
                     let auxElementos = Elementos(nom: arrMole[pos2].nomMolecula, num: arrMole[pos2].numElem, idP: arrMole[pos2].idPadre, hij: arrMole[pos2].numHijos)
                     auxCadena.insert(auxElementos, atIndex: 0)
                 }
@@ -212,15 +226,15 @@ class nomAlcanos: NSObject {
             auxCadena = []
         }
         
-
-        
         //sacar cadena mas larga, y obtener su nombre
         cadeLarga = cadenaLarga(auxCadenaLarga)
+        if auxCadenaLarga[cadeLarga].count > 12 {
+            return "Tu cadena mas larga debe de ser de 12 elementos"
+        }
+        
         nomMolecula = sacarNombreSencilla(auxCadenaLarga[cadeLarga].count)
         nuevaMole = auxCadenaLarga[cadeLarga]
-        for auxi in 0...nuevaMole.count-1 {
-            print(nuevaMole[auxi].nomMolecula,"id ",nuevaMole[auxi].numElem)
-        }
+        
         //Sacar la posicion de los elementos restantes de la cadena
         var auxPadre : Int = 0
         if (arrMole.count-arRami.count) > nuevaMole.count {
@@ -239,7 +253,6 @@ class nomAlcanos: NSObject {
                                 if arrMole[i-1].idPadre == -1{
         
                                     arrMole[i].idPadre = arrMole[i].numElem-1
-                                    print(arrMole[i].idPadre)
                                     auxPadre = buscarPadre(arrMole[i].idPadre, caden: nuevaMole)
                                     nuevaMole[auxPadre].numHijos += 1
                                     faltan -= 1
@@ -247,14 +260,12 @@ class nomAlcanos: NSObject {
                                 else {
                                     arrMole[i].idPadre = arrMole[i-1].idPadre
                                     auxPadre = buscarPadre(arrMole[i].idPadre, caden: nuevaMole)
-                                    print("entra hijos")
                                     nuevaMole[auxPadre].numHijos += 1
                                     faltan -= 1
                                 }
                             }
                             else {
                                 auxPadre = buscarPadre(arrMole[i].idPadre, caden: nuevaMole)
-                                print("entra hijos")
                                 nuevaMole[auxPadre].numHijos += 1
                                 faltan -= 1
                             }
@@ -294,30 +305,25 @@ class nomAlcanos: NSObject {
                 if nuevaMole[j].numHijos > 0 {
                     //de acuerdo a su posicion es como da el nombre si es antes de la mitad.
                     if j <= aux {
-                        
-                        //auxNom += "\(j+1)" + "-" + sacarNombreRam(nuevaMole[j].numHijos)
-                        cadenaRami.append(sacarNombreRam(nuevaMole[j].numHijos))
+                        cadenaRami.append(sacarNombreRam(nuevaMole[j].numHijos)+" "+"\(j+1)")
                         nums.append("\(j+1)")
-                        //print(cadenaRami[0]," ", nums[0])
                     }
                     else{//si es despues de la mitad da el nombre contando su posicion de atras a adelante
-                        //auxNom += "\((nuevaMole.count-j)+1)" + "-" + sacarNombreRam(nuevaMole[j].numHijos)
-                        cadenaRami.append(sacarNombreRam(nuevaMole[j].numHijos))
+                        cadenaRami.append(sacarNombreRam(nuevaMole[j].numHijos)+" "+"\((nuevaMole.count-j)+1)")
                         nums.append("\((nuevaMole.count-j)+1)")
-                        print("segndo valor",auxNom)
-                       // print(cadenaRami[1]," ", nums[1])
                     }
                 }
             }
+            
+            cadenaRami.sortInPlace()
             for n in 0...cadenaRami.count-1{
-                print(cadenaRami[n]," ", nums[n])
+                nums = cadenaRami[n].componentsSeparatedByString(" ")
+                auxNom += nums[1]+"-"+nums[0]+"-"
+
             }
         }
-        
-        
-        
-        
-        return (auxNom + "-" + nomMolecula)
+
+        return (auxNom + " " + nomMolecula)
     }
     
     //Funcion para buscar si se cuenta con un C en la cadena
@@ -328,10 +334,15 @@ class nomAlcanos: NSObject {
             }
         }
         return false
-        
     }
     
-    //Funcion para buscar la posicion de un elemento en un arreglo de objetos.
+    /*
+     *
+     * Metodo buscaPadre
+     *
+     * Este metodo busca la posicion de un elemento en un arreglo de objetos.
+     *
+     */
     func buscarPadre(numElem : Int, caden: [Elementos]) -> Int{
         for i in 0...caden.count-1{
             if caden[i].numElem == numElem {
@@ -341,7 +352,13 @@ class nomAlcanos: NSObject {
         return -1
     }
     
-    //Funcion para buscar si se encuentra un elemento en un arreglo de objetos.
+    /*
+     *
+     * Metodo buscar
+     *
+     * Este metodo busca si se encuentra un elemento en un arreglo de objetos.
+     *
+     */
     func buscar(numElem : Int, caden:[Elementos]) -> Bool{
         for i in 0...caden.count-1{
             if caden[i].numElem == numElem {
@@ -351,7 +368,13 @@ class nomAlcanos: NSObject {
         return false
     }
     
-    //Funcion que regresa cual es la cadena mas larga de la molecula.
+    /*
+     *
+     * Metodo cadenaLarga
+     *
+     * Este metodo regresa la cadena mas larga de una molecula.
+     *
+     */
     func cadenaLarga(caden: [[Elementos]])->Int{
         var posi: Int = 0
         var aux: Int = 0
