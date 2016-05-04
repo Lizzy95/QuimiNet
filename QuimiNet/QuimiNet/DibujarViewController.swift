@@ -50,7 +50,17 @@ class DibujarViewController: UIViewController {
     // MARK: - Actions
     
     @IBAction func oprimeC(sender: UIButton) {
+        if contElementos != 0 && buscarC(idPadre, caden: moleculas){
+            if iRamCor == arrRamificac.count{
+                lbRes.text = "Recrea tu cadena"
+                btC.enabled = false
+                btCH.enabled = false
+                btCH2.enabled = false
+                btCH3.enabled = false
+            }
+        }
         if contElementos == 0 {
+            InicioX = (Vista.frame.size.width)/4
             imagee = UIImageView(image: UIImage(named: "Enlace"))
             //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
             imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
@@ -87,8 +97,8 @@ class DibujarViewController: UIViewController {
             auxInicioY = InicioY+51
             auxRamificacion = Ramificaciones(nom: "C", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
             arrRamificac.append(auxRamificacion)
-            auxInicioX = InicioX-60
-            auxRamificacion = Ramificaciones(nom: "C", num: contElementos-1, posx: auxInicioX, posy: auxInicioY)
+            auxInicioX = InicioX-140
+            auxRamificacion = Ramificaciones(nom: "C", num: contElementos-1, posx: auxInicioX, posy: InicioY)
             arrRamificac.append(auxRamificacion)
         }
         else if contElementos > 0 {
@@ -129,6 +139,15 @@ class DibujarViewController: UIViewController {
     }
     
     @IBAction func oprimeCH(sender: UIButton) {
+        if buscarC(idPadre, caden: moleculas){
+            if iRamCor == arrRamificac.count{
+                lbRes.text = "Recrea tu cadena"
+                btC.enabled = false
+                btCH.enabled = false
+                btCH2.enabled = false
+                btCH3.enabled = false
+            }
+        }
         if contElementos == 0 {
             imagee = UIImageView(image: UIImage(named: "CH"))
             //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
@@ -199,6 +218,15 @@ class DibujarViewController: UIViewController {
             btC.enabled = false
             btCH.enabled = false
             btCH2.enabled = false
+        }
+        if buscarC(idPadre, caden: moleculas){
+            if iRamCor == arrRamificac.count{
+                lbRes.text = "Recrea tu cadena"
+                btC.enabled = false
+                btCH.enabled = false
+                btCH2.enabled = false
+                btCH3.enabled = false
+            }
         }
         if contElementos == 0 {
             imagee = UIImageView(image: UIImage(named: "CH2"))
@@ -308,19 +336,15 @@ class DibujarViewController: UIViewController {
     }
     
     
-    
-    @IBAction func oprimeEnlace(sender: UIButton) {
-         imagee = UIImageView(image: UIImage(named: "Enlace"))
-        //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
-        imagee.frame = CGRectMake(InicioX, InicioY, 40, 28)
-        self.Vista.addSubview(imagee)
-        InicioX += imagee.frame.width
-        btC.enabled = true
-        btCH.enabled = true
-        btCH2.enabled = true
-        btCH3.enabled = true
-        contEnlaces += 1
-
+    func buscarC(numElem: Int, caden: [Elementos])-> Bool{
+        for i in 0...caden.count-1{
+            if caden[i].numElem == numElem {
+                if caden[i].nomMolecula == "C"  {
+                    return true
+                }
+            }
+        }
+        return false
     }
     
     @IBAction func borrarDatos(sender: UIButton) {
