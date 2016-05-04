@@ -19,8 +19,8 @@
 		9A7623321CAC3334002FD62F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A7623311CAC3334002FD62F /* ViewController.swift */; };
 		9A7623371CAC3334002FD62F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9A7623361CAC3334002FD62F /* Assets.xcassets */; };
 		9A76233A1CAC3334002FD62F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9A7623381CAC3334002FD62F /* LaunchScreen.storyboard */; };
-		9A8DC64D1CD7CFB50086247B /* Creditos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9A8DC64C1CD7CFB50086247B /* Creditos.swift */; };
 		9AEABCE91CB2EAA2009AB858 /* Prueba.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9AEABCE81CB2EAA2009AB858 /* Prueba.plist */; };
+		9AF4F2D21CDA5C87006237D4 /* Creditos.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AF4F2D11CDA5C87006237D4 /* Creditos.swift */; };
 		9AFD8A7D1CB0541300FA4814 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFD8A7B1CB0541300FA4814 /* Main.storyboard */; };
 		9AFDE27D1CD95EC0000BA31E /* Main iPadPro.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9AFDE27B1CD95EC0000BA31E /* Main iPadPro.storyboard */; };
 /* End PBXBuildFile section */
@@ -40,8 +40,8 @@
 		9A7623361CAC3334002FD62F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		9A7623391CAC3334002FD62F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9A76233B1CAC3334002FD62F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		9A8DC64C1CD7CFB50086247B /* Creditos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Creditos.swift; path = ../Creditos.swift; sourceTree = "<group>"; };
 		9AEABCE81CB2EAA2009AB858 /* Prueba.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Prueba.plist; sourceTree = "<group>"; };
+		9AF4F2D11CDA5C87006237D4 /* Creditos.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Creditos.swift; sourceTree = "<group>"; };
 		9AFD8A7C1CB0541300FA4814 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		9AFDE27C1CD95EC0000BA31E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = "Base.lproj/Main iPadPro.storyboard"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -77,9 +77,9 @@
 		9A76232E1CAC3334002FD62F /* QuimiNet */ = {
 			isa = PBXGroup;
 			children = (
+				9AF4F2D11CDA5C87006237D4 /* Creditos.swift */,
 				9AFDE27B1CD95EC0000BA31E /* Main iPadPro.storyboard */,
 				9A4AD30D1CD886A80044CB2A /* Main iPad.storyboard */,
-				9A8DC64C1CD7CFB50086247B /* Creditos.swift */,
 				9A76232F1CAC3334002FD62F /* AppDelegate.swift */,
 				9A7623311CAC3334002FD62F /* ViewController.swift */,
 				9A7069281CAEC69C0090AAC6 /* GruposFuncionalesTableViewController.swift */,
@@ -175,7 +175,7 @@
 			files = (
 				9A47A1F21CC2E48100301C00 /* Ramificaciones.swift in Sources */,
 				9A7623321CAC3334002FD62F /* ViewController.swift in Sources */,
-				9A8DC64D1CD7CFB50086247B /* Creditos.swift in Sources */,
+				9AF4F2D21CDA5C87006237D4 /* Creditos.swift in Sources */,
 				9A7069291CAEC69C0090AAC6 /* GruposFuncionalesTableViewController.swift in Sources */,
 				9A70692D1CAEC6E00090AAC6 /* DibujarViewController.swift in Sources */,
 				9A70692B1CAEC6D40090AAC6 /* InformacionViewController.swift in Sources */,
