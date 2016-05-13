@@ -305,13 +305,11 @@ class nomAlcanos: NSObject {
                 if nuevaMole[j].numHijos > 0 {
                     //de acuerdo a su posicion es como da el nombre si es antes de la mitad.
                     if j <= aux {
-                        print("entra")
                         cadenaRami.append(sacarNombreRam(nuevaMole[j].numHijos)+" "+"\(j+1)")
                         nums.append("\(j+1)")
                     }
                     else{//si es despues de la mitad da el nombre contando su posicion de atras a adelante
-                        print("entra2")
-                        cadenaRami.append(sacarNombreRam(nuevaMole[j].numHijos)+" "+"\((nuevaMole.count-j)+1)")
+                        cadenaRami.append(sacarNombreRam(nuevaMole[j].numHijos)+" "+"\(j+1)")
                         nums.append("\((nuevaMole.count-j)+1)")
                     }
                 }

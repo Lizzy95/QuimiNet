@@ -35,12 +35,12 @@
                                 <rect key="frame" x="50" y="126" width="290" height="183"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndz-mH-2wz">
-                                <rect key="frame" x="372" y="203" width="183" height="30"/>
+                                <rect key="frame" x="369" y="192" width="190" height="51"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Owu-3x-puW"/>
+                                    <constraint firstAttribute="width" constant="190" id="Kch-1v-upO"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Intrucciones"/>
+                                <state key="normal" title="Instrucciones"/>
                                 <connections>
                                     <segue destination="HjP-RI-esA" kind="showDetail" identifier="info" id="kIo-Ln-HAU"/>
                                 </connections>
@@ -48,7 +48,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2D-jo-vqM">
                                 <rect key="frame" x="368" y="263" width="183" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Creditos"/>
+                                <state key="normal" title="Créditos"/>
                                 <connections>
                                     <segue destination="8mW-tr-XkY" kind="show" id="I44-5O-mRx"/>
                                 </connections>
@@ -67,23 +67,22 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
+                            <constraint firstItem="ndz-mH-2wz" firstAttribute="top" secondItem="R0X-GY-JPa" secondAttribute="bottom" constant="31" id="67K-ab-cfj"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z6T-Pg-Q3Y" secondAttribute="bottom" constant="66" id="AYR-wQ-uYX"/>
-                            <constraint firstItem="J2D-jo-vqM" firstAttribute="top" secondItem="ndz-mH-2wz" secondAttribute="bottom" constant="30" id="EVf-5c-M3q"/>
                             <constraint firstItem="R0X-GY-JPa" firstAttribute="leading" secondItem="Z6T-Pg-Q3Y" secondAttribute="trailing" constant="35" id="Iao-fu-ZI7"/>
                             <constraint firstItem="J2D-jo-vqM" firstAttribute="leading" secondItem="Z6T-Pg-Q3Y" secondAttribute="trailing" constant="28" id="Jdc-xU-1Z6"/>
                             <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="top" secondItem="R0X-GY-JPa" secondAttribute="top" id="KSn-uK-6vK"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="ndz-mH-2wz" secondAttribute="trailing" constant="92" id="Qg2-jL-jKg"/>
-                            <constraint firstItem="ndz-mH-2wz" firstAttribute="top" secondItem="R0X-GY-JPa" secondAttribute="bottom" constant="42" id="aSo-wo-wtr"/>
                             <constraint firstItem="A33-8j-K1M" firstAttribute="centerX" secondItem="rGz-vF-E63" secondAttribute="centerX" id="bfg-SM-Epa"/>
                             <constraint firstItem="R0X-GY-JPa" firstAttribute="trailing" secondItem="J2D-jo-vqM" secondAttribute="trailing" id="bhf-sI-rfu"/>
-                            <constraint firstItem="R0X-GY-JPa" firstAttribute="centerX" secondItem="ndz-mH-2wz" secondAttribute="centerX" id="bhz-Eo-00W"/>
                             <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="top" secondItem="A33-8j-K1M" secondAttribute="bottom" constant="61" id="c79-7b-uCq"/>
                             <constraint firstItem="A33-8j-K1M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="cab-Yy-JPx"/>
                             <constraint firstItem="rGz-vF-E63" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="cq6-wE-KY5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ndz-mH-2wz" secondAttribute="trailing" constant="88" id="d77-OI-oHG"/>
                             <constraint firstItem="A33-8j-K1M" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="hAE-bo-GxP"/>
-                            <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="centerY" secondItem="ndz-mH-2wz" secondAttribute="centerY" id="iyf-cM-A1Z"/>
+                            <constraint firstItem="ndz-mH-2wz" firstAttribute="leading" secondItem="Z6T-Pg-Q3Y" secondAttribute="trailing" constant="29" id="hK3-vY-woY"/>
                             <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="mLE-Yj-vA1"/>
-                            <constraint firstItem="ndz-mH-2wz" firstAttribute="leading" secondItem="Z6T-Pg-Q3Y" secondAttribute="trailing" constant="32" id="rFl-xU-Ftl"/>
+                            <constraint firstItem="J2D-jo-vqM" firstAttribute="top" secondItem="ndz-mH-2wz" secondAttribute="bottom" constant="20" id="p4p-f3-h9z"/>
+                            <constraint firstItem="ndz-mH-2wz" firstAttribute="centerY" secondItem="Z6T-Pg-Q3Y" secondAttribute="centerY" id="rWa-u0-aQH"/>
                             <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="top" secondItem="rGz-vF-E63" secondAttribute="bottom" constant="41" id="xr0-Md-SjK"/>
                         </constraints>
                     </view>
@@ -224,7 +223,7 @@
                                 <constraints>
                                     <constraint firstAttribute="width" constant="121" id="LSP-5z-qPy"/>
                                 </constraints>
-                                <state key="normal" title="Nombra Molecula"/>
+                                <state key="normal" title="Nombra Molécula"/>
                                 <connections>
                                     <action selector="oprimeNombre:" destination="c7X-d5-tb3" eventType="touchUpInside" id="sUz-ND-bGV"/>
                                 </connections>

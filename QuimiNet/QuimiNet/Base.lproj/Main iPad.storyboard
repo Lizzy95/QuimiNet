@@ -34,12 +34,9 @@
                                 <rect key="frame" x="50" y="126" width="647" height="576"/>
                             </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ndz-mH-2wz">
-                                <rect key="frame" x="725" y="369" width="183" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="hHj-Lr-wQd"/>
-                                </constraints>
+                                <rect key="frame" x="722" y="358" width="196" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Intrucciones"/>
+                                <state key="normal" title="Instrucciones"/>
                                 <connections>
                                     <segue destination="HjP-RI-esA" kind="showDetail" identifier="info" id="kIo-Ln-HAU"/>
                                 </connections>
@@ -47,7 +44,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="R0X-GY-JPa">
                                 <rect key="frame" x="732" y="126" width="176" height="232"/>
                                 <constraints>
-                                    <constraint firstAttribute="width" constant="176" id="15C-Bd-uoN"/>
+                                    <constraint firstAttribute="width" constant="176" id="N59-Ur-VZJ"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
                                 <state key="normal" title="Comenzar"/>
@@ -58,7 +55,7 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J2D-jo-vqM">
                                 <rect key="frame" x="725" y="500" width="183" height="51"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="32"/>
-                                <state key="normal" title="Creditos"/>
+                                <state key="normal" title="Créditos"/>
                                 <connections>
                                     <segue destination="8mW-tr-XkY" kind="show" id="I44-5O-mRx"/>
                                 </connections>
@@ -66,23 +63,23 @@
                         </subviews>
                         <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="ndz-mH-2wz" firstAttribute="top" secondItem="R0X-GY-JPa" secondAttribute="bottom" constant="11" id="0ah-g6-Kxc"/>
-                            <constraint firstItem="R0X-GY-JPa" firstAttribute="trailing" secondItem="ndz-mH-2wz" secondAttribute="trailing" id="1Oh-2p-sks"/>
-                            <constraint firstItem="ndz-mH-2wz" firstAttribute="trailing" secondItem="J2D-jo-vqM" secondAttribute="trailing" id="1r1-N2-1jQ"/>
-                            <constraint firstItem="A33-8j-K1M" firstAttribute="centerX" secondItem="rGz-vF-E63" secondAttribute="centerX" id="83g-CZ-Uhl"/>
-                            <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="AXe-pg-hRM"/>
-                            <constraint firstItem="ndz-mH-2wz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="D6g-zf-DBr"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="R0X-GY-JPa" secondAttribute="trailing" constant="96" id="HVa-Wz-MNW"/>
-                            <constraint firstItem="R0X-GY-JPa" firstAttribute="leading" secondItem="Z6T-Pg-Q3Y" secondAttribute="trailing" constant="35" id="MIl-ao-4Na"/>
-                            <constraint firstItem="ndz-mH-2wz" firstAttribute="leading" secondItem="J2D-jo-vqM" secondAttribute="leading" id="OnN-yt-34J"/>
-                            <constraint firstItem="rGz-vF-E63" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="cpR-Tk-aNT"/>
-                            <constraint firstItem="A33-8j-K1M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="411" id="e9p-yQ-zia"/>
-                            <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="top" secondItem="rGz-vF-E63" secondAttribute="bottom" constant="41" id="gKM-jB-Nbk"/>
-                            <constraint firstItem="ndz-mH-2wz" firstAttribute="leading" secondItem="Z6T-Pg-Q3Y" secondAttribute="trailing" constant="28" id="nBj-64-8FY"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z6T-Pg-Q3Y" secondAttribute="bottom" constant="66" id="o0e-No-bOM"/>
-                            <constraint firstItem="A33-8j-K1M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="qIG-GE-KrZ"/>
-                            <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="top" secondItem="R0X-GY-JPa" secondAttribute="top" id="wll-Ek-kaE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="J2D-jo-vqM" secondAttribute="bottom" constant="217" id="xwG-sj-E4s"/>
+                            <constraint firstItem="R0X-GY-JPa" firstAttribute="centerX" secondItem="ndz-mH-2wz" secondAttribute="centerX" id="1NY-nW-GF5"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ndz-mH-2wz" secondAttribute="trailing" constant="86" id="6dv-ej-GaM"/>
+                            <constraint firstItem="ndz-mH-2wz" firstAttribute="top" secondItem="R0X-GY-JPa" secondAttribute="bottom" id="70m-Qv-Rrv"/>
+                            <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="top" secondItem="R0X-GY-JPa" secondAttribute="top" id="8dz-3q-bWa"/>
+                            <constraint firstItem="ndz-mH-2wz" firstAttribute="leading" secondItem="Z6T-Pg-Q3Y" secondAttribute="trailing" constant="25" id="9Hw-eY-jSF"/>
+                            <constraint firstItem="R0X-GY-JPa" firstAttribute="leading" secondItem="Z6T-Pg-Q3Y" secondAttribute="trailing" constant="35" id="FXJ-D9-KdJ"/>
+                            <constraint firstItem="ndz-mH-2wz" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="GAZ-XO-KKS"/>
+                            <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="30" id="JLu-60-8SD"/>
+                            <constraint firstItem="J2D-jo-vqM" firstAttribute="top" secondItem="ndz-mH-2wz" secondAttribute="bottom" constant="91" id="KXF-eA-Mm4"/>
+                            <constraint firstItem="A33-8j-K1M" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="24" id="NqP-hD-d1Z"/>
+                            <constraint firstItem="R0X-GY-JPa" firstAttribute="trailing" secondItem="J2D-jo-vqM" secondAttribute="trailing" id="Qgu-3T-aB0"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Z6T-Pg-Q3Y" secondAttribute="bottom" constant="66" id="XdW-Fi-XAu"/>
+                            <constraint firstItem="rGz-vF-E63" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="44" id="ZW6-HF-Coz"/>
+                            <constraint firstItem="A33-8j-K1M" firstAttribute="centerX" secondItem="rGz-vF-E63" secondAttribute="centerX" id="giz-PI-1lN"/>
+                            <constraint firstItem="Z6T-Pg-Q3Y" firstAttribute="top" secondItem="rGz-vF-E63" secondAttribute="bottom" constant="41" id="hqW-OZ-bQa"/>
+                            <constraint firstItem="J2D-jo-vqM" firstAttribute="leading" secondItem="Z6T-Pg-Q3Y" secondAttribute="trailing" constant="28" id="pT6-yH-htF"/>
+                            <constraint firstItem="A33-8j-K1M" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" constant="411" id="wd7-pQ-G0S"/>
                         </constraints>
                     </view>
                     <simulatedOrientationMetrics key="simulatedOrientationMetrics" orientation="landscapeRight"/>
@@ -206,7 +203,7 @@
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="4cm-jN-FRa">
                                 <rect key="frame" x="112" y="724" width="148" height="40"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <state key="normal" title="Nombra Molecula"/>
+                                <state key="normal" title="Nombra Molécula"/>
                                 <connections>
                                     <action selector="oprimeNombre:" destination="c7X-d5-tb3" eventType="touchUpInside" id="sUz-ND-bGV"/>
                                 </connections>
@@ -348,6 +345,6 @@
         <image name="Logo" width="1002" height="994"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="M6H-ss-gHb"/>
+        <segue reference="elW-Bb-LzS"/>
     </inferredMetricsTieBreakers>
 </document>

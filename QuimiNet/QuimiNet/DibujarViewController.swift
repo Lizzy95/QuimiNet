@@ -73,7 +73,7 @@ class DibujarViewController: UIViewController {
             self.Vista.addSubview(imagee)
             imagee = UIImageView(image: UIImage(named: "EnlaceParado"))
             //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
-            imagee.frame = CGRectMake(InicioX-10, InicioY-26, 40, 28)
+            imagee.frame = CGRectMake(InicioX-10, InicioY-29, 40, 28)
             self.Vista.addSubview(imagee)
             imagee = UIImageView(image: UIImage(named: "EnlaceParado"))
             //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
@@ -108,7 +108,7 @@ class DibujarViewController: UIViewController {
             self.Vista.addSubview(imagee)
             imagee = UIImageView(image: UIImage(named: "EnlaceParado"))
             //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
-            imagee.frame = CGRectMake(InicioX, InicioY-25, 40, 28)
+            imagee.frame = CGRectMake(InicioX, InicioY-29, 40, 28)
             self.Vista.addSubview(imagee)
             auxInicioX = InicioX
             auxInicioY = InicioY-53
@@ -139,15 +139,18 @@ class DibujarViewController: UIViewController {
     }
     
     @IBAction func oprimeCH(sender: UIButton) {
-        if buscarC(idPadre, caden: moleculas){
-            if iRamCor == arrRamificac.count{
-                lbRes.text = "Recrea tu cadena"
-                btC.enabled = false
-                btCH.enabled = false
-                btCH2.enabled = false
-                btCH3.enabled = false
+        if contElementos > 0 {
+            if buscarC(idPadre, caden: moleculas){
+                if iRamCor == arrRamificac.count{
+                    lbRes.text = "Recrea tu cadena"
+                    btC.enabled = false
+                    btCH.enabled = false
+                    btCH2.enabled = false
+                    btCH3.enabled = false
+                }
             }
         }
+        
         if contElementos == 0 {
             imagee = UIImageView(image: UIImage(named: "CH"))
             //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
@@ -219,15 +222,18 @@ class DibujarViewController: UIViewController {
             btCH.enabled = false
             btCH2.enabled = false
         }
-        if buscarC(idPadre, caden: moleculas){
-            if iRamCor == arrRamificac.count{
-                lbRes.text = "Recrea tu cadena"
-                btC.enabled = false
-                btCH.enabled = false
-                btCH2.enabled = false
-                btCH3.enabled = false
+        if contElementos > 0 {
+            if buscarC(idPadre, caden: moleculas){
+                if iRamCor == arrRamificac.count{
+                    lbRes.text = "Recrea tu cadena"
+                    btC.enabled = false
+                    btCH.enabled = false
+                    btCH2.enabled = false
+                    btCH3.enabled = false
+                }
             }
         }
+       
         if contElementos == 0 {
             imagee = UIImageView(image: UIImage(named: "CH2"))
             //Crear variable Inicio (es para definir un punto de inicio(en el view) a la cadena)
@@ -406,8 +412,6 @@ class DibujarViewController: UIViewController {
 
         // Do any additional setup after loading the view.
         
-            let value = UIInterfaceOrientation.LandscapeLeft.rawValue
-            UIDevice.currentDevice().setValue(value, forKey: "orientation")
         //Codigo para implementar ScrollView
         InicioY = ((Vista.frame.size.height)/2)
         VistaScroll.addSubview(Vista)
