@@ -22,7 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func grabStoryboard() -> UIStoryboard {
         //OBTIENE EL TAMAÑO
         let screenHeight : Int = Int(UIScreen.mainScreen().bounds.size.width);
-        print(screenHeight)
+        //print(screenHeight)
         
         var storyboard : UIStoryboard
         
